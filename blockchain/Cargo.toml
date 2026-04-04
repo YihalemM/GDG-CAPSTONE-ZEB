@@ -1,6 +1,0 @@
-[workspace]
-members = [
-    "contract/contracts/zeb",
-    "scripts",
-    "wallet-client"
-]
