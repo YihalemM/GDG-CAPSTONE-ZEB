@@ -1,66 +1,170 @@
-## Foundry
+# 🛡️ ZEB – Decentralized NFT Protection & Marketplace
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+ZEB (ዘብ🫡) is a blockchain-based platform designed to **protect digital creators** by providing proof of ownership, secure storage, and a decentralized marketplace for trading digital artworks.
 
-Foundry consists of:
+---
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🚀 Features
 
-## Documentation
+### 🔐 Proof of Ownership
 
-https://book.getfoundry.sh/
+- Register digital artwork on-chain
+- Unique **hash-based verification** prevents duplicates
+- Immutable timestamp stored on blockchain
 
-## Usage
+### 🖼️ NFT Minting
 
-### Build
+- Each artwork is minted as an **ERC-721 NFT**
+- Metadata stored using `tokenURI`
+- Tracks:
+  - Creator
+  - Current Owner
+  - Creation Time
 
-```shell
-$ forge build
+### 💰 Fixed Price Marketplace
+
+- List NFTs for sale
+- Buy instantly using ETH
+- Cancel listings anytime
+
+### 🔥 Auction System
+
+- Create time-based auctions
+- Competitive bidding
+- Automatic winner selection
+- Secure ETH handling with refund logic
+
+---
+
+## 🏗️ Smart Contracts Architecture
+
+### 1. ZebNFT.sol
+
+Handles:
+
+- NFT minting
+- Artwork registration
+- Ownership tracking
+- Duplicate prevention (via hash)
+
+### 2. ZebMarketplace.sol
+
+Handles:
+
+- Fixed-price sales
+- Auctions
+- Bidding system
+- Secure ETH transfers
+
+### 3. ZebStorage.sol
+
+Contains:
+
+- Shared structs:
+  - `Artwork`
+  - `Listing`
+  - `Auction`
+
+- Custom errors for gas efficiency
+
+---
+
+## ⚙️ Tech Stack
+
+- **Solidity ^0.8.20**
+- **OpenZeppelin**
+  - ERC721URIStorage
+  - Ownable
+  - ReentrancyGuard
+
+- **Foundry** (for testing & deployment)
+
+---
+
+## 📦 Installation & Setup
+
+```bash
+# Clone repo
+git clone https://github.com/YihalemM/GDG-CAPSTONE-ZEB.git
+
+cd GDG-CAPSTONE-ZEB/blockchain/zeb-eth-contract
+
+# Install dependencies
+forge install
 ```
 
-### Test
+---
 
-```shell
-$ forge test
+## 🔨 Build
+
+```bash
+forge build
 ```
 
-### Format
+---
 
-```shell
-$ forge fmt
+## 🧪 Test
+
+```bash
+forge test -vv
 ```
 
-### Gas Snapshots
+---
 
-```shell
-$ forge snapshot
+## 🚀 Deploy
+
+```bash
+forge script script/Deploy.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
 ```
 
-### Anvil
+---
 
-```shell
-$ anvil
-```
+## 📊 Contract Flow
 
-### Deploy
+### Register Artwork
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+1. User uploads artwork
+2. Hash is generated
+3. NFT is minted
+4. Stored on-chain
 
-### Cast
+### Sell Artwork
 
-```shell
-$ cast <subcommand>
-```
+1. Owner lists NFT
+2. Buyer pays ETH
+3. NFT transferred automatically
 
-### Help
+### Auction
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+1. Seller creates auction
+2. Users place bids
+3. Highest bidder wins
+4. Seller receives ETH
+
+---
+
+## 🔒 Security Features
+
+- ✅ Reentrancy protection (`ReentrancyGuard`)
+- ✅ Safe ETH transfers using `.call`
+- ✅ Refund logic for outbid users
+- ✅ Ownership validation checks
+- ✅ Duplicate artwork prevention
+
+---
+
+## ⚠️ Future Improvements
+
+- Royalty system for creators
+- Frontend integration (Next.js)
+- IPFS/Arweave storage
+- ERC-2981 royalties
+- Gas optimization
+
+---
+
+---
+
+## 📜 License
+
+MIT License
