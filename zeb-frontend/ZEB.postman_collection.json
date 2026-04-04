@@ -1,0 +1,613 @@
+{
+  "info": {
+    "_postman_id": "a8ac4e07-aa5e-4961-91a8-2ddfa5ab34ba",
+    "name": "ZEB",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31448834",
+    "_collection_link": "https://go.postman.co/collection/31448834-a8ac4e07-aa5e-4961-91a8-2ddfa5ab34ba?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User Register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"Yetu\",\r\n  \"password\": \"Yetu@123\",\r\n  \"publickey\": \"GBBN5OTUVHD5DLYXHLDCSLDS64ZWYTL7RMEWJ25VDLFDE3KVI6ZB6ICD\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"Yeab\",\r\n  \"password\": \"Yeab@123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "upload Art",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "f587af54-7563-4922-b422-17f89e072e68",
+              "src": "/C:/Users/user/Videos/Captures/AbriTech Solutions - Google Chrome 2026-01-29 11-06-23.mp4"
+            },
+            {
+              "key": "title",
+              "value": "abri",
+              "type": "text",
+              "uuid": "9c54ddac-a9e9-4c5c-83f3-30f5facd7366"
+            },
+            {
+              "key": "description",
+              "value": "abritech",
+              "type": "text",
+              "uuid": "b5a6e621-ac63-4492-b66d-a7c207c631d5"
+            },
+            {
+              "key": "creatorBy",
+              "value": "yeab",
+              "type": "text",
+              "uuid": "1be43db3-a651-4107-8f14-83a6734dba23"
+            },
+            {
+              "key": "ownedBy",
+              "value": "yeab",
+              "type": "text",
+              "uuid": "30357ba5-a335-4ac2-a846-2931a0f8d36f"
+            },
+            {
+              "key": "category",
+              "value": "video",
+              "type": "text",
+              "uuid": "1725fee3-3cd0-40b9-bde2-c3e137126074"
+            },
+            {
+              "key": "minPrice",
+              "value": "200",
+              "type": "text",
+              "uuid": "9175b645-ac29-4436-aa2a-214bb172b6f4"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/arts/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "arts",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "content verify",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "d79229ee-39b4-43f7-b988-fa438d27667a",
+              "src": "/C:/Users/user/Pictures/udemy.jpg"
+            },
+            {
+              "key": "title",
+              "value": "udemy",
+              "type": "text",
+              "uuid": "340fd2fa-b24f-474e-95de-f2cbd1b11bfc"
+            },
+            {
+              "key": "category",
+              "value": "text",
+              "type": "text",
+              "uuid": "e6ba6056-376a-4d9d-94f6-948cfc12565c"
+            },
+            {
+              "key": "creatorBy",
+              "value": "Yeab",
+              "type": "text",
+              "uuid": "464b64dc-e984-4d93-9b2f-a2408e713598"
+            },
+            {
+              "key": "ownedBy",
+              "value": "Yeab",
+              "type": "text",
+              "uuid": "6acc4ee2-9895-42ac-b973-ef9655bb0edc"
+            },
+            {
+              "key": "minPrice",
+              "value": "100",
+              "type": "text",
+              "uuid": "51c0bdfd-71e2-4eb3-aa3e-27d606dec260"
+            },
+            {
+              "key": "description",
+              "value": "udemy",
+              "type": "text",
+              "uuid": "ef7e1722-1ac5-478d-abab-b199f606d7dd"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/verify/verify",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "verify",
+            "verify"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create Auction",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"art_hash\": \"59cf3baf35ee6749d58a9d6e10233f02476d749c852b10128c6041d198b38fb3\",\r\n  \"seller\": \"GDFK3NTAUYXU2RYUPUHAIZQDEOYPCIMF4ACV2G5RACB36QOD7VNMH2ZB\",\r\n  \"end_time\": 1774100510000\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auction/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Art Metadata",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Digital Sunset\",\r\n  \"description\": \"A beautiful digital sunset\",\r\n  \"filePath\": \"uploads/some_hash\",\r\n  \"hash\": \"some_hash_string\",\r\n  \"creatorBy\": \"Yeab\",\r\n  \"ownedBy\": \"Yeab\",\r\n  \"category\": \"Digital Art\",\r\n  \"minPrice\": 100\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/arts/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "arts",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get art by id",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/arts/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "arts",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "69bd4c5463a9cd0df2486979"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update art price",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"minPrice\": 150\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/arts/price/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "arts",
+            "price",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "69bd4c5463a9cd0df2486979"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update owner",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"ownedBy\": \"Tsega\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/arts/owner/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "arts",
+            "owner",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "69bd4c5463a9cd0df2486979"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "place Bid",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"art_hash\": \"59cf3baf35ee6749d58a9d6e10233f02476d749c852b10128c6041d198b38fb3\",\r\n  \"bidder\": \"GBBN5OTUVHD5DLYXHLDCSLDS64ZWYTL7RMEWJ25VDLFDE3KVI6ZB6ICD\",\r\n  \"amount\": 300\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auction/bid",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "bid"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Auction by ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auction/id/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "id",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "69bd4c5463a9cd0df2486979"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Auction by Art Hash",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auction/art/:art_hash",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "art",
+            ":art_hash"
+          ],
+          "variable": [
+            {
+              "key": "art_hash",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Bidder for art hash",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auction/bidders/:art_hash",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "bidders",
+            ":art_hash"
+          ],
+          "variable": [
+            {
+              "key": "art_hash",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get highest bid",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auction/highest_bid/:art_hash",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "highest_bid",
+            ":art_hash"
+          ],
+          "variable": [
+            {
+              "key": "art_hash",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Close Bid",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"seller\": \"GDFK3NTAUYXU2RYUPUHAIZQDEOYPCIMF4ACV2G5RACB36QOD7VNMH2ZB\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auction/close/:art_hash",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auction",
+            "close",
+            ":art_hash"
+          ],
+          "variable": [
+            {
+              "key": "art_hash",
+              "value": "59cf3baf35ee6749d58a9d6e10233f02476d749c852b10128c6041d198b38fb3"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Activity",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/activity/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "activity",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
