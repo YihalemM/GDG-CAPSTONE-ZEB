@@ -1,4 +1,11 @@
+# Solidity / Blockchain
 .env
 /node_modules
-/cache
-/out
+cache/
+out/
+artifacts/
+*.dbg.json
+
+
+
+
