@@ -155,11 +155,7 @@ forge script script/Deploy.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY>
 
 ## ⚠️ Future Improvements
 
-- Royalty system for creators
-- Frontend integration (Next.js)
-- IPFS/Arweave storage
-- ERC-2981 royalties
-- Gas optimization
+-
 
 ---
 
